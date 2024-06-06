@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.css";
 import Tweet from "./components/Tweet";
+import ProfileImage from "./components/ProfileImage";
+import User from "./components/User";
+import Timestamp from "./components/Timestamp";
+import Actions from "./components/Actions";
+import Message from "./components/Message";
 
 const tweetsArray = [
   {
@@ -41,7 +46,12 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet tweet={tweetsArray[0]} />
+      <Tweet tweet={tweetsArray[0]}>
+        <ProfileImage tweet={tweetsArray[0]}></ProfileImage>
+        <User tweet={tweetsArray[0]}></User>
+        <Timestamp tweet={tweetsArray[0]}></Timestamp>
+        <Message tweet={tweetsArray[0]}></Message>
+      </Tweet>
     </div>
   );
 }
